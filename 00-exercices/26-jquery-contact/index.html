@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery - Carnet de contacts</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-book"></i> Carnet de contacts</h1>
+    </header>
+    <main>
+        <ul id="list-contacts">
+            
+        </ul>
+        
+        <div id="details">
+            <h2>M. Lionel Van Houten</h2>
+            <p>06 22 55 77 88</p>
+            <a href="#">Editer ce contact</a>
+        </div>
+        
+        <div class="buttons">
+            <button id="btn-add"><i class="fas fa-plus"></i></button>
+            <button id="btn-delete"><i class="fas fa-trash"></i></button>
+        </div>
+        
+        <form>
+            <fieldset class="formulaire">
+                <label>Civilité: </label>
+                <select name="civilite" id="civilite">
+                    <option value="Monsieur">Monsieur</option>
+                    <option value="Madame">Madame</option>
+                    <option value="Madame">Mademoiselle</option>
+                </select>
+                <label>Nom: </label>
+                <input class="" type="text" name="nom" placeholder="Votre nom" id="nom" required>
+                <label>Prénom: </label>
+                <input class="" type="text" name="prenom" placeholder="Votre prénom" id="prenom" required>
+                <label>Téléphone: </label>
+                <input class="" type="text" name="telephone" placeholder="Votre téléphone" id="telephone" required>
+                <button type="submit"><i class="fas fa-save"></i> Enregistrer</button>
+                <!--input type="submit" value="Enregister"-->
+            </fieldset>
+        </form>
+        
+    </main>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/handlers.js"></script>
+</body>
+</html>

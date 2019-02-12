@@ -1,0 +1,31 @@
+/********************** CSS GENERAL **********************/
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    /* structure */
+    margin: 0 auto;
+    min-height: 100%;
+    width: 80%;
+
+    /* presentation */
+    background-color: #ECF0F1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+canvas
+{
+    background-color: white;
+    box-shadow: 0 0 8px 1px #2C3E50;
+}
+
+h1
+{
+    color: #E74C3C;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 4px #E79C94;
+}

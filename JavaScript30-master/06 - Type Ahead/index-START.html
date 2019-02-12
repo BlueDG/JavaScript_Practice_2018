@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Type Ahead 👀</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form class="search-form">
+    <input type="text" class="search" placeholder="City or State">
+    <ul class="suggestions">
+      <li>Filter for a city</li>
+      <li>or a state</li>
+    </ul>
+  </form>
+<script>
+const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+let cities = [];
+  
+  // 1) Je veux me connecter à ce serveur, récupérer les données et les stocker
+  // dans un tableau
+  const xhr = new XMLHttpRequest();
+  
+  xhr.open('GET', endpoint);
+  
+  xhr.addEventListener('load', function() {
+    cities = JSON.parse(xhr.responseText);
+  });
+  
+  xhr.send();
+  
+  // 2) Je veux travailler sur l'<input> et sur le <ul>
+  const input = document.querySelector('input.search');
+  const suggestions = document.querySelector('ul.suggestions');
+  
+  input.addEventListener('input', function(){
+    // Trouver les villes correspondantes
+    const search = input.value;
+    const resultats = findCities(search);
+    // Construire des <li> avec les villes et les intégrer au <ul>
+    let html = '';
+    
+    for(let i = 0; i < resultats.length; i++) {
+      const ville = resultats[i];
+      const li = `
+        <li>${ville.city}, ${ville.state} (${ville.population})</li>
+      `;
+      
+      html = html + li;
+    }
+    
+    suggestions.innerHTML = html;
+    
+  });
+  
+  function findCities(str) {
+    // On veut parcourir toutes les villes (str => 'Ange')
+    // Et on ne veut garder que celles qui contiennent str
+    const correspondances = [];
+    
+    for(let i = 0; i < cities.length; i++){
+      const ville = cities[i];
+      const villeMinuscule = ville.city.toLowerCase();
+      const etatMinuscule = ville.state.toLowerCase();
+      const recherche = str.toLowerCase();
+      // Est-ce que le nom de cette ville contient str ou l'état de cette ville contient str ?
+      if(villeMinuscule.includes(recherche) == true || etatMinuscule.includes(recherche) == true) {
+        correspondances.push(ville);
+      }
+    }
+    
+    return correspondances;
+  }
+
+</script>
+  </body>
+</html>

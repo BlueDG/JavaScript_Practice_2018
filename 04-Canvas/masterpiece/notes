@@ -1,0 +1,20 @@
+-----------
+MASTERPIECE
+-----------
+
+- tracer un disque
+- répéter le tracé d'un disque
+- gérer le clic sur le canvas
+- récupérer les coordonnées du clic sur le canvas
+- générer une couleur aléatoire
+- générer un entier aléatoire
+
+1°) Créer le code HTML de la page
+    La zone de dessin mesurera 800 X 600 et sera centrée sur la page
+    Le canvas aura une bordure de 10px de couleur dorée (gold)
+    
+2°) Tracer un disque sur le canvas
+
+3°) Ajouter la couleur aléatoire et la taille aléatoire
+
+4°) Dessiner le disque à l'endroit du clic

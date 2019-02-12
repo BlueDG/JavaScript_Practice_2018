@@ -1,0 +1,25 @@
+AJAX DEF:
+
+Asynchronous Javascript And XML 
+( Asynchronous: la requête HTTP prend un certain temps) 
+(Mais JS continue de travailler alors que la requête est toujours en attente.)
+
+
+-->Ajax en gros permet d'envoyer des requêtes HTTP au serveur via Javascript
+Une requête HTTP, c'est quand tu changes de page dans ton navigateur.
+
+-->En Javascript natif, on utilise un objet: XMLHttpRequest.
+--> REM. Un nouvel outil existe aussi en JS Natif: l'API fetch.
+
+
+-->En JQuery, ces méthodes permettent de faire de l'Ajax :
+
+-> Fait quelque chose en particulier:
+    .load()
+    $.get()
+    $.post()
+    $.getJSON()
+    $.getScript()
+    
+-> Fait tout:    
+    $.ajax()

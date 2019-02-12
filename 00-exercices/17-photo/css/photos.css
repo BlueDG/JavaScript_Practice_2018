@@ -1,0 +1,45 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    margin-right:auto;
+    margin-left: auto;
+    max-width: 1200px;
+}
+
+img{
+    width: 100%;
+    
+}
+
+
+#photo-list {
+    width: 800px;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+}
+
+#photo-list li {
+    width: 18%;
+    margin-bottom: 5%;
+    padding: 10px;
+   
+}
+
+
+.selected{
+    background-color: green;
+    border-radius: 5px;
+}
+
+#total span{
+    color: red;
+}

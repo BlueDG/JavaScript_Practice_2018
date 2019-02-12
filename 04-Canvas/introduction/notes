@@ -1,0 +1,19 @@
+--------
+ CANVAS
+--------
+
+Exemples : 
+- https://code.tutsplus.com/articles/21-ridiculously-impressive-html5-canvas-experiments--net-14210
+- https://davidwalsh.name/canvas-demos
+
+Tutoriels :
+- https://developer.mozilla.org/fr/docs/Tutoriel_canvas
+- https://openclassrooms.com/fr/courses/1282286-la-balise-canvas-avec-javascript
+- https://www.html5canvastutorials.com/
+- https://www.alsacreations.com/tuto/lire/1484-introduction.html
+
+Canvas permet de dessiner sur une page web en javascript.
+
+Canvas va agir sur les pixels
+Balise <canvas> directement dans le code source HTML
+La balise <canvas> restera vide => le dessin en canvas est totalement "opaque" dans le code source.

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Application JS</title>
+    
+    <style>
+        li[data-selected="true"]{
+            font-weight: bold;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Carte du restaurant</h1>
+    
+    <ul>
+        <li data-prix="11.50" data-selected="true" data-calories="30">Salade aux légumes de saison</li>
+        <li data-prix="14.30" data-selected="false" data-calories="200">Omelette à la spiruline et piment de cayenne</li>
+        <li data-prix="15" data-selected="false" data-calories="100">Poisson blanc vapeur aux épices régionales</li>
+        <li data-prix="8.20" data-selected="false" data-calories="56">Soupe de poisson</li>
+        <li data-prix="7" data-selected="false" data-calories="98">Jus frais de gingembre et agrumes</li>
+    </ul>
+    
+    <p>Nombre de plats sélectionnés: <span id="nombre">0</span>
+    </p>
+    <p>Total des calories: <span id="calories">0</span></p>
+    <p>Prix de la commande: <span id="prix">0</span> &euro;</p>
+    
+    <input type="text" id="prenom" placeholder="votre prénom">
+    <button id="btn-save">Sauvegarder</button>
+    <button id="btn-load">Charger</button>
+    
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
